@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins="*", allowedHeaders="*")
+@CrossOrigin(origins="https://git.heroku.com/spring-react-mongodb-front-end.git", allowedHeaders="*")
 @RestController
 @RequestMapping("post")
 public class PostController {
