@@ -43,5 +43,10 @@ public class PostServiceImpl implements PostService {
         BeanUtils.copyProperties(postDto, post);
         return postRepository.save(post);
     }
+    @Override
+    public Post getPost(String id) {
+        Post post = findById(id);
+        return post;
+    }
     
 }

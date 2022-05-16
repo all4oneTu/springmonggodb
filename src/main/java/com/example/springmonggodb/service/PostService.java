@@ -15,4 +15,6 @@ public interface PostService {
     List<Post> getAllPosts(Sort sort);
     
     Post updatePost(PostDto postDto);
+
+    Post getPost(String id);
 }

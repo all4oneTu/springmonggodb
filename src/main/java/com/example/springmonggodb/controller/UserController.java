@@ -38,7 +38,12 @@ public class UserController {
     }
     @GetMapping("gettAll")
     public ResponseEntity<List<User>> getAllUser() {
-       List <User> user = userService.getAllUsers();
+        List<User> user = userService.getAllUsers();
+        return ResponseEntity.ok(user);
+    }
+    @GetMapping("findByEmail")
+    public ResponseEntity<User> findUserByEmail(@RequestParam("email") String email) {
+        User user = userService.findUserByEmail(email);
         return ResponseEntity.ok(user);
     }
 }

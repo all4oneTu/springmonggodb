@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins="https://git.heroku.com/spring-react-mongodb-front-end.git", allowedHeaders="*")
+// @CrossOrigin(origins="https://git.heroku.com/spring-react-mongodb-front-end.git", allowedHeaders="*")
+@CrossOrigin
 @RestController
 @RequestMapping("post")
 public class PostController {
@@ -38,6 +40,13 @@ public class PostController {
         List<Post> user = postService.getAllPosts(Sort.by(Sort.Direction.DESC, "upvotes"));
         // List<Post> user = postService.getAllPosts();
         return ResponseEntity.ok(user);
+    }
+
+    @GetMapping("get")
+    public ResponseEntity<Post> getPost(@RequestParam("id") String id) {
+        Post post = postService.findById(id);
+       
+        return ResponseEntity.ok(post);
     }
     @PutMapping("update")
     public ResponseEntity<Post> updateEmployee(@RequestBody PostDto postDto) {
