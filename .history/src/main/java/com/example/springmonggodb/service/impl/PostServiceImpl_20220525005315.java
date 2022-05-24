@@ -53,8 +53,9 @@ public class PostServiceImpl implements PostService {
         return postRepository.findByCommunity(community);
     }
     @Override
-    public void deletePostById(String id) {       
-       postRepository.deleteById(id);
+    public Post deletePostById(String id) {
+        // TODO Auto-generated method stub
+        return null;
     }
     
 }

@@ -20,5 +20,5 @@ public interface PostService {
 
     List<Post> getPostByCommunity(String community);
 
-    void deletePostById(String id);
+    
 }

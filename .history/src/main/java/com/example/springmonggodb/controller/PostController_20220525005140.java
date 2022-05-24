@@ -61,10 +61,6 @@ public class PostController {
         List<Post> post = postService.getPostByCommunity(community);
         return ResponseEntity.ok(post);
     }
-    @DeleteMapping("deletePost")
-    public ResponseEntity<String> deletePost(@RequestParam("id") String id) {
-        postService.deletePostById(id);
-        return ResponseEntity.ok("Post deleted successfully");
-    }
+    @DeleteMapping("")
 
 }

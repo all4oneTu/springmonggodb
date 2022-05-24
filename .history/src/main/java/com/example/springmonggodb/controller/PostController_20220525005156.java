@@ -62,9 +62,9 @@ public class PostController {
         return ResponseEntity.ok(post);
     }
     @DeleteMapping("deletePost")
-    public ResponseEntity<String> deletePost(@RequestParam("id") String id) {
-        postService.deletePostById(id);
-        return ResponseEntity.ok("Post deleted successfully");
+    public ResponseEntity<String> deleteEmployee(@RequestParam("id") String id) {
+        employeeService.deleteEmployeeById(id);
+        return ResponseEntity.ok("Employee deleted successfully");
     }
 
 }

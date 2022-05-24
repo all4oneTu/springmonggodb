@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -20,8 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-// @CrossOrigin(origins="https://front-end-react-beta.vercel.app/", allowedHeaders="*")
-@CrossOrigin
+@CrossOrigin(origins="https://front-end-react-beta.vercel.app/", allowedHeaders="*")
 @RestController
 @RequestMapping("post")
 public class PostController {
@@ -60,11 +58,6 @@ public class PostController {
     public ResponseEntity<List<Post>> getAllPostByComunity(@RequestParam("community") String community) {
         List<Post> post = postService.getPostByCommunity(community);
         return ResponseEntity.ok(post);
-    }
-    @DeleteMapping("deletePost")
-    public ResponseEntity<String> deletePost(@RequestParam("id") String id) {
-        postService.deletePostById(id);
-        return ResponseEntity.ok("Post deleted successfully");
     }
 
 }
