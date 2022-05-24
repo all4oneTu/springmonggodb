@@ -59,5 +59,5 @@ public class PostController {
         List<Post> post = postService.getPostByCommunity(community);
         return ResponseEntity.ok(post);
     }
-
+    @Get
 }

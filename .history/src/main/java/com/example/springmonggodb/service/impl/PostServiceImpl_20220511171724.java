@@ -48,9 +48,5 @@ public class PostServiceImpl implements PostService {
         Post post = findById(id);
         return post;
     }
-    @Override
-    public List<Post> getPostByCommunity(String community) {
-        return postRepository.findByCommunity(community);
-    }
     
 }

@@ -17,6 +17,4 @@ public interface PostService {
     Post updatePost(PostDto postDto);
 
     Post getPost(String id);
-
-    List<Post> getPostByCommunity(String community);
 }

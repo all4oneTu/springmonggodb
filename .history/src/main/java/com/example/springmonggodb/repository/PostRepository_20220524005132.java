@@ -13,5 +13,6 @@ public interface PostRepository extends MongoRepository<Post,String>{
     @Query("{upvotes: ?0}")
     List<Post> findAll();
 
+
     List<Post> findByCommunity(String community);
 }

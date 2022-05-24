@@ -56,8 +56,7 @@ public class PostController {
     }
     @GetMapping("getAllByCom")
     public ResponseEntity<List<Post>> getAllPostByComunity(@RequestParam("community") String community) {
-        List<Post> post = postService.getPostByCommunity(community);
+        List<Post> post = postService.getPostByCommunity();
         return ResponseEntity.ok(post);
     }
-
 }

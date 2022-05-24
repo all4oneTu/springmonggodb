@@ -18,5 +18,5 @@ public interface PostService {
 
     Post getPost(String id);
 
-    List<Post> getPostByCommunity(String community);
+    List<Post> getPostByCommunity(String community)
 }

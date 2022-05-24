@@ -50,7 +50,8 @@ public class PostServiceImpl implements PostService {
     }
     @Override
     public List<Post> getPostByCommunity(String community) {
-        return postRepository.findByCommunity(community);
+        // TODO Auto-generated method stub
+        return pos;
     }
     
 }
