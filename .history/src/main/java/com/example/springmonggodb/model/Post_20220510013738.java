@@ -21,5 +21,4 @@ public class Post {
     private Integer comments;
     private String community;
     private String username;
-    private String created_at;
 }

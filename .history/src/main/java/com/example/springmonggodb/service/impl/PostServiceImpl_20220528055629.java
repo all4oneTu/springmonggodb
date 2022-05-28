@@ -59,7 +59,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public List<Post> getAllPostsBySort(Sort sort) {
         // TODO Auto-generated method stub
-        return postRepository.findAll(Sort.by(Sort.Direction.DESC, "created_at"));
+         return postRepository.findAll(Sort.by(Sort.Direction.DESC, "upvotes"));;
     }
     
 }

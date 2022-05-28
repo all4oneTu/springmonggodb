@@ -9,5 +9,4 @@ public class CommentDto {
     private String post;
     private String username;
     private String text;
-    private String created_at;
 }

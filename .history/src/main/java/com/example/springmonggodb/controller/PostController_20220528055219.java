@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@CrossOrigin(origins="https://front-end-react-beta.vercel.app/", allowedHeaders="*")
-// @CrossOrigin
+// @CrossOrigin(origins="https://front-end-react-beta.vercel.app/", allowedHeaders="*")
+@CrossOrigin
 @RestController
 @RequestMapping("post")
 public class PostController {
@@ -43,12 +43,7 @@ public class PostController {
         // List<Post> user = postService.getAllPosts();
         return ResponseEntity.ok(user);
     }
-    @GetMapping("getAllBySort")
-    public ResponseEntity<List<Post>> getAllUserBySort() {
-        List<Post> user = postService.getAllPostsBySort(Sort.by(Sort.Direction.ASC, "created_at"));
-        // List<Post> user = postService.getAllPosts();
-        return ResponseEntity.ok(user);
-    }
+    
     @GetMapping("get")
     public ResponseEntity<Post> getPost(@RequestParam("id") String id) {
         Post post = postService.findById(id);

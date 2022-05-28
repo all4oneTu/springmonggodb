@@ -14,7 +14,7 @@ public interface PostService {
 
     List<Post> getAllPosts(Sort sort);
 
-    List<Post> getAllPostsBySort(Sort sort);
+    List<Post> getAllPostsBySort(sort )
     
     Post updatePost(PostDto postDto);
 
